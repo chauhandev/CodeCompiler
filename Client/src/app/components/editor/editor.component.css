@@ -1,0 +1,76 @@
+.mainEditor{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#resize{
+    width :5px;
+    cursor: ew-resize;
+  }
+
+.exeuteButton{
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+#editorDiv{
+  width:calc(50% - 5px);
+  height:100%;
+  min-width:20%;
+  min-height:20%;  
+}
+#outputDiv{
+  flex:1;
+  min-width:20%;
+  min-height:20%;
+  border-left: 2px solid rgb(46 60 81/1) ;
+  border-top:0px;
+}
+
+#otherOutput{
+  margin:0px 10px;
+}
+
+.editorContainer{
+  height:100%;
+  display: flex;
+  flex :1;
+}
+
+.editor{
+  width: 100%;
+  height: 100%;
+}
+
+#htmlOutput{
+  width:calc(100% - 5px);
+  height:100%;
+}
+
+/* Media query for screens with a maximum width of 600 pixels */
+@media only screen and (max-width: 768px) {
+  .mainEditor{
+    flex-direction: column;
+  }
+  #editorDiv{
+    width:100%;
+    height:calc(50% - 5px);
+    min-height:20%;
+    max-height: 80%;
+  }
+  .editor{
+    width: 100%;
+    height: 100%;
+  }
+  #resize{
+    height:5px;
+    width:100%;
+    cursor: ns-resize;
+  }
+  #outputDiv{
+    border-left: 0px;
+    border-top: 2px solid rgb(46 60 81/1) ;
+  }
+}
+

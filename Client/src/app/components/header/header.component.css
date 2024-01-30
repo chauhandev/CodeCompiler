@@ -1,0 +1,50 @@
+.mainHeader{
+   display: flex;
+   align-items: center;
+   width:100%;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+    /* border: 2px solid black; */
+    /* border-radius: 50%;  */
+}
+ .logo img {
+   height: 30px;
+   padding: 5px;   
+ }
+
+ .app-name{
+    flex:1;
+    text-align: center;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+.headerLightMode{
+   background-color: #fff !important;
+   color : #000 !important;
+   /* background: radial-gradient(circle, #2e3c51 2px, transparent 0); */
+   /* background-size: 80px 40px; */
+   /* animation: dotScroll 10s linear infinite; */
+}
+.headerDarkMode{
+   background-color: #1c2130 !important;
+   color : #fff !important;
+   background: radial-gradient(circle, #2e3c51  2px, transparent 0);
+   background-size: 80px 40px;
+   animation: dotScroll 10s linear infinite;
+   
+}
+ 
+@keyframes dotScroll{
+   0% {
+     background-position-y: 140px;
+     /* background-position: 0 0, 10px 10px; */
+ }
+ 100% {
+     background-position-y: 0;
+     /* background-position: 100px 100px, 110px 110px; */
+ }
+}

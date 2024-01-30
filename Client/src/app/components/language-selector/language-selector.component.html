@@ -1,0 +1,9 @@
+<div class="wrapper">
+      <mat-tab-group (selectedTabChange)="tabChanged($event)" [backgroundColor]="'primary'">
+            <mat-tab *ngFor="let language of languages" [label]="language.displayName">
+                  <div class="wrapper">
+                        <app-editor [language]="language.value">Test</app-editor>
+                  </div>
+            </mat-tab>
+      </mat-tab-group>
+</div>

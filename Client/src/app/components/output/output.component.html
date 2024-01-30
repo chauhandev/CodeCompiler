@@ -1,0 +1,10 @@
+<div id="outputDiv">
+    <mat-tab-group >
+       <mat-tab label="Output" >
+        <div *ngIf="language === 'Html' else otherOutputBlock" id="htmlOutput"></div>
+        <ng-template #otherOutputBlock>
+          <div id="otherOutput">Output</div>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+ </div>

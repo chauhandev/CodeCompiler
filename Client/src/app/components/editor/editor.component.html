@@ -1,0 +1,78 @@
+<div class="mainEditor">
+   <div id="editorDiv">
+      <mat-tab-group  id="tab-group">
+         <ng-container *ngIf="language === 'html'  else elseif1">
+               <mat-tab  label="index.html" >
+                  <div class="editorContainer">
+                     <div #editorHTML class="editor"></div>
+                  </div>
+               </mat-tab>
+               <mat-tab  label="style.css" >
+                  <div class="editorContainer">
+                     <div #editorCSS class="editor"></div>
+                  </div>
+               </mat-tab>
+               <mat-tab  label="script.js" >
+                  <div class="editorContainer">
+                     <div #editorJS class="editor"></div>
+                  </div>
+               </mat-tab>
+         </ng-container>
+         
+         <ng-template #elseif1>
+            <ng-container *ngIf="language === 'java'; else elseif2">
+               <mat-tab label="main.java">
+                 <div class="editorContainer">
+                   <div #editorJava class="editor"></div>
+                 </div>
+               </mat-tab>
+             </ng-container>
+          </ng-template>
+
+          <ng-template #elseif2>
+            <ng-container *ngIf="language === 'cpp'; else elseif3">
+               <mat-tab label="main.cpp">
+                 <div class="editorContainer">
+                   <div #editorCpp class="editor"></div>
+                 </div>
+               </mat-tab>
+             </ng-container>
+          </ng-template>
+          <ng-template #elseif3>
+            <ng-container *ngIf="language === 'js'; else elseBlock">
+               <mat-tab label="main.js">
+                 <div class="editorContainer">
+                   <div #editorJavaScript class="editor"></div>
+                 </div>
+               </mat-tab>
+             </ng-container>
+          </ng-template>          
+         <ng-template #elseBlock>
+            <mat-tab  label="Language Not Supported" >
+               <div>
+                  Language Not Supported currently !
+               </div>
+            </mat-tab>
+          </ng-template>
+        
+         <mat-tab class="disableTab" disabled>
+            <ng-template mat-tab-label>
+               <button class="exeuteButton" mat-button color="accent" (click)="getOutput()">Run</button>
+            </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+      
+   </div>
+   <div id="resize" (mousedown)="resize($event)"></div>
+   <div id="outputDiv" >
+      <mat-tab-group >
+         <mat-tab label="Output" >
+          <div *ngIf="language === 'html' else otherOutputBlock" id="htmlOutput" class="lightMode"> </div>
+          <ng-template #otherOutputBlock>
+            <pre id="otherOutput"></pre>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+   </div>
+   
+</div>
