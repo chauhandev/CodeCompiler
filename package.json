@@ -7,10 +7,11 @@
   "scripts": {
     "ng": "ng",
     "start:client": "cd Client && ng serve",
-    "build": "cd client && ng build",
+    "build": "cd Client && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:server": "cd server && node index.js"
+    "start:server": "cd Server && node index.js",
+    "test1": "ng build --prefix Client"
     },
   "private": true,
   "dependencies": {
