@@ -10,7 +10,7 @@
     "build": "cd Client && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:server": "cd Client && ng build && cd Server && node index.js",
+    "start:server": "cd Server && node index.js",
     "test1": "ng build --prefix Client"
     },
   "private": true,
