@@ -11,14 +11,14 @@ const { executeCppFile } = require('./executable/executeCPP');
 
 const PORT = process.env.PORT || 3000
 // Use cors middleware
-const corsOptions = {
-    origin: 'http://localhost:4200', // Replace with the actual origin of your Angular app
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    optionsSuccessStatus: 204,
-  };
+// const corsOptions = {
+//     origin: 'http://localhost:4200', // Replace with the actual origin of your Angular app
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     credentials: true,
+//     optionsSuccessStatus: 204,
+//   };
   
-  app.use(cors(corsOptions));
+//   app.use(cors(corsOptions));
   app.use(express.json()); 
 // app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
