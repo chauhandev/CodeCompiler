@@ -25,6 +25,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res){
     res.sendFile(`${path.join(__dirname,'public/index.html')}`);
 });
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).send('Service is running');
+});
 app.use(express.urlencoded({ extended: true }));
 app.post('/run', async (req, res) => {
    const {LANGUAGE:language,CODE:code} = req.body;
