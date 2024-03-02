@@ -19,9 +19,9 @@ RUN npm run build
 # Stage 2: Final image with Node.js application and Java
 FROM ubuntu:latest
 
-# Install Java (OpenJDK) in the container
+# Install Java (OpenJDK) and g++ in the container
 RUN apt-get update && \
-    apt-get install -y default-jdk
+    apt-get install -y default-jdk g++
 
 # Install Node.js and npm in the container
 RUN apt-get install -y nodejs npm
