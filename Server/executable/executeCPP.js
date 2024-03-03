@@ -5,9 +5,7 @@ const executeCppFile = (filePath) => {
     const fileName = path.basename(filePath).split('.')[0];
     const outPath = path.dirname(filePath);
     const compiledFileName = `${outPath}/${fileName}`;
-
-    const command = `g++ -o "${compiledFileName}" "${filePath}" && ./${compiledFileName}`;
-
+    const command = `g++ -o "${compiledFileName}" "${filePath}" && ${compiledFileName}`;
     return new Promise((resolve, reject) => {
         exec(command, (error, stdout, stderr) => {
             if (error) {

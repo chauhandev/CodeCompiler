@@ -63,8 +63,7 @@ app.post('/run', async (req, res) => {
     }
     else {
         return res.json({error : "language not supported currently",output : ""});
-    }
-  
+    }  
     deleteFile(filePath.filePath);
     return res.json(output);
 
