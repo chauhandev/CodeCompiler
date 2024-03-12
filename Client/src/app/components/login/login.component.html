@@ -1,0 +1,33 @@
+<div class="container">
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+    <mat-card class="custom-card">
+      <mat-card-header class="custom-header">
+        <mat-card-title class="custom-title">Login</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-form-field class="custom-form-field" appearance="fill">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" required>
+        </mat-form-field>
+
+        <mat-form-field class="custom-form-field" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" required>
+        </mat-form-field>
+      </mat-card-content>
+
+      <mat-card-actions class="custom-actions">
+        <div class="button-group">
+          <button mat-raised-button color="primary" type="submit">Login</button>
+          <button mat-raised-button color="accent" (click)="redirectToRegister()">Register</button>
+        </div>
+      </mat-card-actions>
+
+      <mat-card-actions class="additional-actions">
+        <a mat-button routerLink="/forgot-password">Forgot Password</a>
+        <button mat-button (click)="signInWithGoogle()">Sign in with Google</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

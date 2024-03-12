@@ -7,15 +7,5 @@ import { Service } from './service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Dev++';
-  theme = 'lightMode'
-  constructor(private service: Service){
-    // this.theme = service.getmode() =='light' ? 'lightMode' :'darkMode';
-  }
-  ngOnInit() {
-   this.service.getmode().subscribe(theme => {
-      this.theme = theme =='light' ? 'lightMode' :'darkMode';
-    }) ;
-  }
 
 }

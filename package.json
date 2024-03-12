@@ -12,7 +12,7 @@
     "test": "ng test",
     "start:server": "cd Server && node index.js",
     "test1": "ng build --prefix Client"
-    },
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.0",
@@ -20,6 +20,7 @@
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
     "@angular/core": "^16.2.0",
+    "@angular/fire": "^16.0.0",
     "@angular/forms": "^16.2.0",
     "@angular/material": "^16.2.13",
     "@angular/platform-browser": "^16.2.0",
@@ -27,13 +28,14 @@
     "@angular/router": "^16.2.0",
     "@types/ace": "^0.0.52",
     "ace-builds": "^1.32.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase": "^10.8.1",
     "material": "^0.7.9",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.13.0",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "zone.js": "~0.13.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.2",

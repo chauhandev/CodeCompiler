@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-card {
+  max-width: 400px;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-header {
+  background-color: #2196f3;
+  color: #ffffff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.custom-title {
+  font-size: 24px;
+}
+
+.custom-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.custom-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+}
+
+.additional-actions {
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.mat-raised-button {
+  border-radius: 4px;
+  padding: 10px 24px;
+}
+
+.mat-raised-button[color="primary"] {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+.mat-raised-button[color="accent"] {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.mat-raised-button:hover {
+  opacity: 0.8;
+}
+
+a.mat-button {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a.mat-button:hover {
+  text-decoration: underline;
+}
+
+button.mat-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button.mat-button:hover {
+  opacity: 0.8;
+}

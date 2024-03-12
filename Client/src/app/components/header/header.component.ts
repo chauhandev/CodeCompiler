@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Service } from 'src/app/service';
+import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,10 @@ import { Service } from 'src/app/service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
   
   isDarkMode: boolean = false;
-  constructor(public service: Service){
+  constructor(public service: Service,private authService: AuthService){
 
   }
   ngOnInit() {
@@ -20,4 +22,9 @@ export class HeaderComponent {
   toggleMode() {
     this.service.toggleMode();
   }
+
+  logout() {
+    this.authService.logout();
+  }
+  
 }

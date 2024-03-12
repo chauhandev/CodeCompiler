@@ -15,6 +15,16 @@ import { MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OutputComponent } from './components/output/output.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CompilerDashboardComponent } from './components/compiler-dashboard/compiler-dashboard.component';
+import { MatCardModule } from '@angular/material/card';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+
 @NgModule({ 
   declarations: [
     AppComponent,
@@ -22,7 +32,12 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     EditorComponent,
     LanguageSelectorComponent,
-    OutputComponent
+    OutputComponent,
+    LoginComponent,
+    RegisterComponent,
+    CompilerDashboardComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +48,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatTabsModule,
     MatInputModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    FormsModule,
+    ReactiveFormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

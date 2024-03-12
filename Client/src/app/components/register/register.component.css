@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-card {
+  max-width: 400px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-header {
+  background-color: #2196f3;
+  color: #ffffff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.custom-title {
+  font-size: 24px;
+}
+
+.custom-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.custom-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mat-raised-button {
+  background-color: #2196f3;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+}
+
+.mat-raised-button:hover {
+  background-color: #1976d2;
+}
+
+/* Adjusting the size of input fields */
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-input-element {
+  font-size: 14px;
+  padding: 10px;
+}

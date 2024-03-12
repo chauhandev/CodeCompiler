@@ -21,6 +21,8 @@
     <div>
       <mat-icon *ngIf="!isDarkMode" (click)="toggleMode()">nights_stay</mat-icon>
       <mat-icon *ngIf="isDarkMode" (click)="toggleMode()"> wb_sunny</mat-icon>
+      <mat-icon (click)="logout()">exit_to_app</mat-icon>
+
     </div>
   </div>    
 </mat-toolbar>
